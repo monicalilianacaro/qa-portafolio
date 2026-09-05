@@ -190,11 +190,11 @@
             object-position: center top;
         }
 
-        /* --- PROYECTOS --- */
+        /* --- SECCIÓN GENERALES --- */
         .section-title-box {
             text-align: center;
             margin-bottom: 40px;
-            margin-top: 40px;
+            margin-top: 64px;
         }
 
         .section-title {
@@ -210,6 +210,7 @@
             margin-top: 8px;
         }
 
+        /* --- GRID DE PROYECTOS --- */
         .grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -306,6 +307,58 @@
             text-decoration: none;
         }
 
+        /* --- NUEVA SECCIÓN DE DETALLES (SOBRE MÍ e INFO) --- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        @media (min-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .info-block {
+            background-color: var(--bg-cards);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .info-block h3 {
+            color: var(--primary-wine);
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        .info-list i {
+            color: var(--primary-wine);
+            margin-top: 5px;
+            font-size: 12px;
+        }
+
         footer {
             margin-top: 64px;
             padding-top: 24px;
@@ -323,23 +376,3 @@
         
         <!-- SECCIÓN HERO -->
         <section class="hero-section">
-            <div class="hero-content">
-                <p class="hero-greeting">¡Hola! Soy</p>
-                <h1>Mónica Caro</h1>
-                <p class="subtitle">
-                    <span class="pulse-dot"></span>
-                    QA Engineer | Especializada en Aseguramiento de Calidad & Automatización
-                </p>
-                
-                <div class="intro-text">
-                    <p>
-                        Ingeniera de control de calidad de software (QA) con un enfoque metódico, riguroso y analítico para la detección de fallas y optimización de procesos. Apasionada por el diseño estratégico de pruebas funcionales, la validación exhaustiva de sistemas y la construcción de pipelines automatizados que garanticen la estabilidad, seguridad y máxima calidad en productos digitales.
-                    </p>
-                </div>
-
-                <div class="hero-buttons">
-                    <a href="#proyectos" class="btn-primary">Ver Proyectos &rarr;</a>
-                    <a href="mailto:monica.caro.qa@gmail.com" class="btn-secondary">Contactarme <i class="fa-regular fa-envelope"></i></a>
-                </div>
-
-                <div class="hero-socials">
