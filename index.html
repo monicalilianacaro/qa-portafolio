@@ -85,7 +85,7 @@
             font-size: 16px;
             margin-top: 24px;
             padding-top: 24px;
-            border-t: 1px solid rgba(51, 65, 85, 0.5);
+            border-top: 1px solid rgba(51, 65, 85, 0.3);
         }
 
         /* Grid de Proyectos */
@@ -162,6 +162,12 @@
             border: 1px solid rgba(168, 85, 247, 0.2);
         }
 
+        .icon-orange {
+            color: #fb923c;
+            background-color: rgba(251, 146, 60, 0.1);
+            border: 1px solid rgba(251, 146, 60, 0.2);
+        }
+
         .card-tag {
             font-family: monospace;
             font-size: 12px;
@@ -188,10 +194,15 @@
             color: #c084fc;
         }
 
+        .card-orange:hover h3 {
+            color: #fb923c;
+        }
+
         .card p {
             color: #94a3b8;
             font-size: 14px;
             margin: 0 0 16px 0;
+            min-height: 60px;
         }
 
         .tech-tags {
@@ -300,7 +311,7 @@
                             <div class="icon-box icon-cyan">
                                 <i class="fas fa-laptop-code"></i>
                             </div>
-                            <span class="card-tag">Sprint Final</span>
+                            <span class="card-tag">Sprint UI</span>
                         </div>
                         <h3>Framework de Pruebas Web E2E</h3>
                         <p>
@@ -317,12 +328,7 @@
                     </button>
                 </div>
 
-                <!-- TARJETA 2: REPORTE INTERACTIVO EN TIEMPO REAL -->
-                <div class="card card-purple">
+                <!-- TARJETA 2: AUTOMATIZACIÓN DE APIS -->
+                <div class="card card-orange">
                     <div>
                         <div class="card-header">
-                            <div class="icon-box icon-purple">
-                                <i class="fas fa-chart-bar"></i>
-                            </div>
-                            <span class="card-tag">CI/CD Link</span>
-                        </div>
