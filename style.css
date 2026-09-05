@@ -308,14 +308,15 @@ section {
    ============================== */
 
 .hero-section {
-    margin-bottom: 70px;
+    padding: 35px 0 20px;
+    margin-bottom: 45px;
 }
 
 .hero-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 45px;
+    gap: 50px;
 }
 
 .hero-photo img {
