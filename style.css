@@ -1,1 +1,290 @@
+/* ==============================
+   ESTILOS GENERALES
+   ============================== */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f5f2;
+    color: #252525;
+    line-height: 1.6;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+section {
+    margin-bottom: 70px;
+}
+/* ==============================
+   TÍTULOS DE SECCIÓN
+   ============================== */
+
+.section-title-box {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #252525;
+}
+
+.section-subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 16px;
+}
+/* ==============================
+   TARJETAS DE PROYECTOS
+   ============================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e5e2de;
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0ece7;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.icon-box i {
+    font-size: 22px;
+}
+
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 14px;
+}
+
+.card p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+/* ==============================
+   TECNOLOGÍAS Y BOTONES
+   ============================== */
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 6px 11px;
+    background-color: #f0ece7;
+    color: #4a4540;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #252525;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #444444;
+}
+
+.btn-disabled {
+    background-color: #eeeeee;
+    color: #888888;
+    cursor: default;
+    pointer-events: none;
+}
+/* ==============================
+   HABILIDADES & HERRAMIENTAS
+   ============================== */
+
+.skills-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-mini-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e2de;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.skill-mini-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.skill-mini-header i {
+    font-size: 20px;
+}
+
+.skill-mini-header h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.skill-mini-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.mini-tag {
+    padding: 7px 10px;
+    background-color: #f5f2ee;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #555;
+}
+/* ==============================
+   SOBRE MÍ Y EDUCACIÓN
+   ============================== */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.info-block {
+    background-color: #ffffff;
+    border: 1px solid #e5e2de;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.info-block h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+
+.info-list {
+    list-style: none;
+}
+
+.info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 15px;
+}
+
+.info-list li i {
+    margin-top: 5px;
+    font-size: 14px;
+}
+/* ==============================
+   DISEÑO RESPONSIVE
+   ============================== */
+
+@media (max-width: 900px) {
+
+    main {
+        padding: 45px 20px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-mini-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 35px 15px;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .grid,
+    .skills-mini-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: auto;
+    }
+
+    .info-block {
+        padding: 22px;
+    }
+
+}
