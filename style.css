@@ -446,3 +446,27 @@ section {
     font-size: 19px;
 }
 
+/* ==============================
+   FOOTER
+   ============================== */
+
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #252525;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.footer p:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.footer p:last-child {
+    font-size: 13px;
+    color: #cccccc;
+}
+
+
