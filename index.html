@@ -4,79 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mónica Caro | QA Automation Engineer Portfolio</title>
-    <!-- Iconos profesionales oficiales -->
     <link rel="stylesheet" href="https://cloudflare.com">
-    
     <style>
-        /* Paleta de Colores de la Referencia */
         :root {
-            --bg-light: #FFF9F9;      /* Fondo crema claro general */
-            --bg-cards: #FFFFFF;      /* Fondo blanco puro para tarjetas */
-            --primary-wine: #6B1D33;  /* Color vino destacado */
-            --text-dark: #2A1A1E;     /* Texto principal oscuro */
-            --text-muted: #6E5D61;    /* Texto secundario atenuado */
-            --border-light: #F0E2E4;  /* Bordes suaves */
+            --bg-light: #FFF9F9;
+            --bg-cards: #FFFFFF;
+            --primary-wine: #6B1D33;
+            --text-dark: #2A1A1E;
+            --text-muted: #6E5D61;
+            --border-light: #F0E2E4;
         }
-
         body {
             background-color: var(--bg-light);
             color: var(--text-dark);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: system-ui, -apple-system, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
-
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 48px 24px;
         }
-
-        /* --- SECCIÓN HERO CORREGIDA --- */
         .hero-section {
             display: flex;
-            flex-direction: column-reverse; /* Foto arriba en móviles */
+            flex-direction: column-reverse;
             align-items: center;
             justify-content: space-between;
             gap: 40px;
             margin-bottom: 64px;
-            padding: 20px 0;
-            width: 100%;
         }
-
         @media (min-width: 768px) {
-            .hero-section {
-                flex-direction: row; /* Lado a lado en computadoras */
-                gap: 60px;
-            }
+            .hero-section { flex-direction: row; gap: 60px; }
         }
-
-        .hero-content {
-            flex: 1;
-            width: 100%;
-        }
-
+        .hero-content { flex: 1; width: 100%; }
         @media (min-width: 768px) {
-            .hero-content {
-                max-width: 60%; /* Espacio seguro para evitar que baje la imagen */
-            }
+            .hero-content { max-width: 60%; }
         }
-
         .hero-greeting {
             font-size: 18px;
             font-weight: 600;
             color: var(--primary-wine);
             margin: 0 0 8px 0;
         }
-
         h1 {
             font-size: 48px;
             font-weight: 800;
             margin: 0 0 16px 0;
             color: var(--primary-wine);
         }
-
         .subtitle {
             font-size: 18px;
             color: var(--text-dark);
@@ -86,37 +63,24 @@
             align-items: center;
             gap: 10px;
         }
-
         .pulse-dot {
             width: 10px;
             height: 10px;
             background-color: #34d399;
             border-radius: 50%;
             display: inline-block;
-            box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
-            animation: pulse 2s infinite;
         }
-
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
-        }
-
         .intro-text {
             color: var(--text-muted);
             font-size: 16px;
             margin-bottom: 32px;
         }
-
-        /* Botones del Hero */
         .hero-buttons {
             display: flex;
             gap: 16px;
             margin-bottom: 32px;
             flex-wrap: wrap;
         }
-
         .btn-primary {
             background-color: var(--primary-wine);
             color: #ffffff;
@@ -124,13 +88,7 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: background 0.3s;
         }
-
-        .btn-primary:hover {
-            background-color: #4D1222;
-        }
-
         .btn-secondary {
             background-color: transparent;
             color: var(--primary-wine);
@@ -139,90 +97,31 @@
             text-decoration: none;
             font-weight: 600;
             border: 2px solid var(--primary-wine);
-            transition: all 0.3s;
         }
-
-        .btn-secondary:hover {
-            background-color: rgba(107, 29, 51, 0.05);
-        }
-
-        /* Redes Sociales */
-        .hero-socials {
-            display: flex;
-            gap: 20px;
-        }
-
-        .hero-socials a {
-            color: var(--primary-wine);
-            font-size: 20px;
-            transition: opacity 0.3s;
-            text-decoration: none;
-        }
-
-        .hero-socials a:hover {
-            opacity: 0.7;
-        }
-
-        /* --- CONTENEDOR REDONDO DE LA FOTO --- */
+        .hero-socials { display: flex; gap: 20px; }
+        .hero-socials a { color: var(--primary-wine); font-size: 20px; text-decoration: none; }
         .hero-image-container {
             position: relative;
             width: 280px;
             height: 280px;
             flex-shrink: 0;
-            border-radius: 50%; /* Fuerza forma circular */
-            overflow: hidden;    /* Recorta bordes excedentes */
+            border-radius: 50%;
+            overflow: hidden;
             border: 4px solid var(--primary-wine);
             box-shadow: 0 20px 40px rgba(107, 29, 51, 0.15);
             background-color: #ffffff;
         }
-
         @media (min-width: 960px) {
-            .hero-image-container {
-                width: 340px;
-                height: 340px;
-            }
+            .hero-image-container { width: 340px; height: 340px; }
         }
-
-        .hero-profile-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
-        }
-
-        /* --- TÍTULOS DE SECCIÓN --- */
-        .section-title-box {
-            text-align: center;
-            margin-bottom: 40px;
-            margin-top: 64px;
-        }
-
-        .section-title {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--primary-wine);
-            margin: 0;
-        }
-
-        .section-subtitle {
-            color: var(--text-muted);
-            font-size: 14px;
-            margin-top: 8px;
-        }
-
-        /* --- GRID DE PROYECTOS --- */
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 24px;
-        }
-
+        .hero-profile-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+        .section-title-box { text-align: center; margin-bottom: 40px; margin-top: 64px; }
+        .section-title { font-size: 28px; font-weight: 700; color: var(--primary-wine); margin: 0; }
+        .section-subtitle { color: var(--text-muted); font-size: 14px; margin-top: 8px; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
         @media (min-width: 768px) {
-            .grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            .grid { grid-template-columns: repeat(3, 1fr); }
         }
-
         .card {
             background-color: var(--bg-cards);
             border-radius: 12px;
@@ -231,22 +130,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(107, 29, 51, 0.08);
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
         .icon-box {
             width: 40px;
             height: 40px;
@@ -257,28 +142,11 @@
             font-size: 18px;
             background-color: rgba(107, 29, 51, 0.08);
             color: var(--primary-wine);
+            margin-bottom: 16px;
         }
-
-        .card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--primary-wine);
-            margin: 0;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 14px;
-            margin: 0 0 16px 0;
-            flex-grow: 1;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
+        .card h3 { font-size: 18px; font-weight: 700; color: var(--primary-wine); margin: 0 0 8px 0; }
+        .card p { color: var(--text-muted); font-size: 14px; margin: 0 0 16px 0; flex-grow: 1; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; }
         .tech-tag {
             font-size: 11px;
             font-weight: 600;
@@ -288,7 +156,6 @@
             border-radius: 4px;
             border: 1px solid var(--border-light);
         }
-
         .btn-disabled {
             width: 100%;
             background-color: #f5f5f5;
@@ -305,9 +172,8 @@
             cursor: not-allowed;
             margin-top: 16px;
             text-decoration: none;
+            box-sizing: border-box;
         }
-
-        /* --- SECCIÓN HABILIDADES (BADGES) --- */
         .skills-container {
             background-color: var(--bg-cards);
             border: 1px solid var(--border-light);
@@ -315,19 +181,10 @@
             padding: 32px;
             margin-top: 24px;
         }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-        }
-
+        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
         @media (min-width: 640px) {
-            .skills-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
+            .skills-grid { grid-template-columns: repeat(4, 1fr); }
         }
-
         .skill-badge {
             background-color: var(--bg-light);
             border: 1px solid var(--border-light);
@@ -340,52 +197,22 @@
             gap: 8px;
             font-weight: 600;
             font-size: 14px;
-            color: var(--text-dark);
         }
-
-        .skill-badge i {
-            font-size: 24px;
-            color: var(--primary-wine);
-        }
-
-        /* --- GRID COMPLEMENTARIO DE INFORMACIÓN --- */
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 32px;
-            margin-top: 48px;
-        }
-
+        .skill-badge i { font-size: 24px; color: var(--primary-wine); }
+        .info-grid { display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 48px; }
         @media (min-width: 768px) {
-            .info-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .info-grid { grid-template-columns: 1fr 1fr; }
         }
-
         .info-block {
-            background-color: var(--bg-cargds);
+            background-color: var(--bg-cards);
             border: 1px solid var(--border-light);
             border-radius: 12px;
             padding: 28px;
         }
-        .info-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .info-list li {
-            margi-bottom: 12px;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            color: var(--text-muted);
-            font-size: 15px;
-        }
-        .info-list i {
-            color: var(primmary-wine);
-            margin-top: 5px;
-            font-size: 12px;
-        }
+        .info-block h3 { color: var(--primary-wine); font-size: 20px; margin: 0 0 16px 0; display: flex; align-items: center; gap: 10px; }
+        .info-list { list-style: none; padding: 0; margin: 0; }
+        .info-list li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; color: var(--text-muted); font-size: 15px; }
+        .info-list i { color: var(--primary-wine); margin-top: 5px; font-size: 12px; }
         footer {
             margin-top: 64px;
             padding-top: 24px;
@@ -395,158 +222,34 @@
             font-size: 12px;
             color: var(--text-muted);
         }
-        ### 📑 Parte 2: Pega esto inmediatamente abajo (Sin dejar espacios)
-Pon tu cursor justo al final de la palabra `<body>` del bloque anterior, y pega esta segunda mitad que contiene todos tus textos estructurados en etiquetas HTML reales:
-
-```html
+    </style>
+</head>
+<body>
     <div class="container">
-        
-        <!-- SECCIÓN HERO -->
         <section class="hero-section">
             <div class="hero-content">
                 <p class="hero-greeting">¡Hola! Soy</p>
                 <h1>Mónica Caro</h1>
-                <p class="subtitle">
-                    <span class="pulse-dot"></span>
-                    QA Engineer | Especializada en Aseguramiento de Calidad & Automatización
-                </p>
-                
+                <p class="subtitle"><span class="pulse-dot"></span> QA Engineer | Especializada en Aseguramiento de Calidad & Automatización</p>
                 <div class="intro-text">
-                    <p>
-                        Ingeniera de control de calidad de software (QA) con un enfoque metódico, riguroso y analítico para la detección de fallas y optimización de procesos. Apasionada por el diseño estratégico de pruebas funcionales, la validación exhaustiva de sistemas y la construcción de pipelines automatizados que garanticen la estabilidad, seguridad y máxima calidad en productos digitales.
-                    </p>
+                    <p>Ingeniera de control de calidad de software (QA) con un enfoque metódico, riguroso y analítico para la detección de fallas y optimización de procesos. Apasionada por el diseño estratégico de pruebas funcionales, la validación exhaustiva de sistemas y la construcción de pipelines automatizados que garanticen la estabilidad, seguridad y máxima calidad en productos digitales.</p>
                 </div>
-
                 <div class="hero-buttons">
                     <a href="#proyectos" class="btn-primary">Ver Proyectos &rarr;</a>
                     <a href="mailto:monica.caro.qa@gmail.com" class="btn-secondary">Contactarme <i class="fa-regular fa-envelope"></i></a>
                 </div>
-
                 <div class="hero-socials">
                     <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
                     <a href="mailto:monica.caro.qa@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
-            
-            <!-- CONTENEDOR DE TU FOTO REAL -->
             <div class="hero-image-container">
                 <img src="PERFIL.jpeg" alt="Mónica Caro" class="hero-profile-img">
             </div>
         </section>
 
-        <!-- SECCIÓN DE PROYECTOS -->
         <main id="proyectos">
             <div class="section-title-box">
                 <h2 class="section-title">Consola de Proyectos Automatizados</h2>
                 <p class="section-subtitle">Explora mis proyectos enfocados en automatización de pruebas y aseguramiento de calidad.</p>
-            </div>
-
-            <div class="grid">
-                <!-- Tarjeta 1 -->
-                <div class="card">
-                    <div>
-                        <div class="card-header">
-                            <div class="icon-box"><i class="fa-solid fa-desktop"></i></div>
-                            <h3>Sprint UI</h3>
-                        </div>
-                        <p>Automatización de flujos críticos de usuario de extremo a extremo (UI) mediante patrones POM y aserciones avanzadas.</p>
-                    </div>
-                    <div>
-                        <div class="tech-tags">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Playwright</span>
-                            <span class="tech-tag">Selenium</span>
-                        </div>
-                        <a href="#" class="btn-disabled">Conectar Automatización Real (Próximamente) &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 2 -->
-                <div class="card">
-                    <div>
-                        <div class="card-header">
-                            <div class="icon-box"><i class="fa-solid fa-server"></i></div>
-                            <h3>Sprint API</h3>
-                        </div>
-                        <p>Validación de servicios backend, esquemas JSON y tiempos de respuesta con Postman y JavaScript.</p>
-                    </div>
-                    <div>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Postman</span>
-                            <span class="tech-tag">REST API</span>
-                        </div>
-                        <a href="#" class="btn-disabled">Inspeccionar Espacio en Postman &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 3 -->
-                <div class="card">
-                    <div>
-                        <div class="card-header">
-                            <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
-                            <h3>CI/CD Link</h3>
-                        </div>
-                        <p>Integración de reportes Allure y GitHub Actions para auditar evidencias y resultados de ejecución.</p>
-                    </div>
-                    <div>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Allure Report</span>
-                            <span class="tech-tag">GitHub Actions</span>
-                        </div>
-                        <a href="#" class="btn-disabled">Abrir Reporte Gráfico (Próximamente) &rarr;</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SECCIÓN DE HABILIDADES TÉCNICAS -->
-            <div class="section-title-box">
-                <h2 class="section-title">Habilidades & Herramientas</h2>
-                <p class="section-subtitle">Tecnologías fundamentales usadas para asegurar la calidad en cada etapa.</p>
-            </div>
-
-            <div class="skills-container">
-                <div class="skills-grid">
-                    <div class="skill-badge"><i class="fa-solid fa-vial"></i> Pruebas Manuales</div>
-                    <div class="skill-badge"><i class="fa-solid fa-code"></i> Automatización UI</div>
-                    <div class="skill-badge"><i class="fa-solid fa-gears"></i> Pruebas API</div>
-                    <div class="skill-badge"><i class="fa-solid fa-infinity"></i> CI/CD Pipelines</div>
-                    <div class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</div>
-                    <div class="skill-badge"><i class="fa-solid fa-rocket"></i> Postman</div>
-                    <div class="skill-badge"><i class="fa-solid fa-mask"></i> Playwright</div>
-                    <div class="skill-badge"><i class="fa-brands fa-github"></i> Git & GitHub</div>
-                </div>
-            </div>
-
-            <!-- SOBRE MÍ Y EDUCACIÓN -->
-            <div class="info-grid">
-                <div class="info-block">
-                    <h3><i class="fa-solid fa-user"></i> Sobre mí & Mi Enfoque</h3>
-                    <ul class="info-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Entender el problema desde la raíz antes de escribir código.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Diseñar estrategias de prueba efectivas y escalables.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Automatizar flujos con un propósito claro, evitando falsos positivos.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Documentar y reportar hallazgos con máxima claridad técnica.</li>
-                    </ul>
-                </div>
-
-                <div class="info-block">
-                    <h3><i class="fa-solid fa-graduation-cap"></i> Educación & Certificaciones</h3>
-                    <ul class="info-list">
-                        <li><i class="fa-solid fa-certificate"></i> ISTQB Foundation Level (En progreso)</li>
-                        <li><i class="fa-solid fa-university"></i> Ingeniería en Automatización y Control - Universidad del Sinú</li>
-                        <li><i class="fa-solid fa-award"></i> JavaScript Algorithms and Data Structures - freeCodeCamp</li>
-                        <li><i class="fa-solid fa-award"></i> Test Automation with Playwright - Udemy</li>
-                    </ul>
-                </div>
-            </div>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 Mónica Caro. Todos los derechos reservados.</p>
-        </footer>
-
-    </div>
-</body>
-</html>
-        
