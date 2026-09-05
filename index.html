@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mónica Caro | QA Automation Engineer Portfolio</title>
-    <!-- Iconos profesionales (FontAwesome para redes y botones) -->
+    <!-- Iconos profesionales -->
     <link rel="stylesheet" href="https://cloudflare.com">
     
     <style>
@@ -33,10 +33,10 @@
             padding: 48px 24px;
         }
 
-        /* --- SECCIÓN HERO CORREGIDA --- */
+        /* --- SECCIÓN HERO --- */
         .hero-section {
             display: flex;
-            flex-direction: column-reverse; /* En móviles la foto va arriba del texto */
+            flex-direction: column-reverse;
             align-items: center;
             justify-content: space-between;
             gap: 40px;
@@ -45,10 +45,9 @@
             width: 100%;
         }
 
-        /* Pantallas de Computadora (Escritorio) */
         @media (min-width: 768px) {
             .hero-section {
-                flex-direction: row; /* Pone el texto y la foto lado a lado */
+                flex-direction: row;
                 gap: 60px;
             }
         }
@@ -60,7 +59,7 @@
 
         @media (min-width: 768px) {
             .hero-content {
-                max-width: 60%; /* Evita que el texto empuje la foto hacia abajo */
+                max-width: 60%;
             }
         }
 
@@ -164,17 +163,16 @@
             opacity: 0.7;
         }
 
-        /* --- CONTENEDOR REDONDO (FOTO DE PERFIL) --- */
+        /* --- CONTENEDOR REDONDO DE LA FOTO --- */
         .hero-image-container {
             position: relative;
             width: 280px;
             height: 280px;
             flex-shrink: 0;
-            border-radius: 50%; /* Transforma el recuadro en un círculo perfecto */
-            overflow: hidden;    /* Corta cualquier exceso de la foto fuera del círculo */
+            border-radius: 50%;
+            overflow: hidden;
             border: 4px solid var(--primary-wine);
             box-shadow: 0 20px 40px rgba(107, 29, 51, 0.15);
-            background-image: none !important; 
             background-color: #ffffff;
         }
 
@@ -188,11 +186,11 @@
         .hero-profile-img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Evita que la foto se distorsione o se estire */
-            object-position: center top; /* Centra el encuadre directamente en tu rostro */
+            object-fit: cover;
+            object-position: center top;
         }
 
-        /* --- DISEÑO DE PROYECTOS INTEGRADO --- */
+        /* --- PROYECTOS --- */
         .section-title-box {
             text-align: center;
             margin-bottom: 40px;
@@ -323,7 +321,7 @@
 
     <div class="container">
         
-        <!-- SECCIÓN HERO (TEXTO A LA IZQUIERDA, FOTO REDONDA A LA DERECHA) -->
+        <!-- SECCIÓN HERO -->
         <section class="hero-section">
             <div class="hero-content">
                 <p class="hero-greeting">¡Hola! Soy</p>
@@ -335,3 +333,13 @@
                 
                 <div class="intro-text">
                     <p>
+                        Ingeniera de control de calidad de software (QA) con un enfoque metódico, riguroso y analítico para la detección de fallas y optimización de procesos. Apasionada por el diseño estratégico de pruebas funcionales, la validación exhaustiva de sistemas y la construcción de pipelines automatizados que garanticen la estabilidad, seguridad y máxima calidad en productos digitales.
+                    </p>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn-primary">Ver Proyectos &rarr;</a>
+                    <a href="mailto:monica.caro.qa@gmail.com" class="btn-secondary">Contactarme <i class="fa-regular fa-envelope"></i></a>
+                </div>
+
+                <div class="hero-socials">
