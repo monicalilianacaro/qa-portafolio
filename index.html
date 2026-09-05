@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mónica Caro | QA Automation Engineer Portfolio</title>
-    <!-- Iconos profesionales -->
+    <!-- Iconos profesionales (FontAwesome para redes y botones) -->
     <link rel="stylesheet" href="https://cloudflare.com">
     
     <style>
-        /* Estilos base estilo consola oscura */
+        /* Paleta de Colores de la Referencia */
+        :root {
+            --bg-light: #FFF9F9;      /* Fondo crema claro general */
+            --bg-cards: #FFFFFF;      /* Fondo blanco puro para tarjetas */
+            --primary-wine: #6B1D33;  /* Color vino destacado */
+            --text-dark: #2A1A1E;     /* Texto principal oscuro */
+            --text-muted: #6E5D61;    /* Texto secundario atenuado */
+            --border-light: #F0E2E4;  /* Bordes suaves */
+        }
+
         body {
-            background-color: #0f172a;
-            color: #f1f5f9;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             margin: 0;
             padding: 0;
@@ -19,258 +28,285 @@
         }
 
         .container {
-            max-width: 960px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 48px 16px;
+            padding: 48px 24px;
         }
 
-        /* Encabezado */
-        header {
-            background-color: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(12px);
-            padding: 32px;
-            border-radius: 16px;
-            border: 1px solid rgba(51, 65, 85, 0.5);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            transition: all 0.3s ease;
-            margin-bottom: 48px;
+        /* --- NUEVA SECCIÓN HERO (INICIO) --- */
+        .hero-section {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 64px;
+            padding: 20px 0;
         }
 
-        header:hover {
-            border-color: rgba(34, 211, 238, 0.4);
+        @media (min-width: 768px) {
+            .hero-section {
+                flex-direction: row;
+                gap: 60px;
+            }
         }
 
-        .badge {
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #22d3ee;
-            background-color: rgba(6, 182, 212, 0.1);
-            padding: 4px 12px;
-            border-radius: 9999px;
-            border: 1px solid rgba(6, 182, 212, 0.2);
-            display: inline-block;
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-greeting {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-wine);
+            margin: 0 0 8px 0;
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 48px;
             font-weight: 800;
-            margin: 12px 0 8px 0;
-            background: linear-gradient(to right, #ffffff, #e2e8f0, #22d3ee);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin: 0 0 16px 0;
+            color: var(--primary-wine);
         }
 
         .subtitle {
             font-size: 18px;
-            color: #94a3b8;
-            margin: 0;
-            font-weight: 500;
+            color: var(--text-dark);
+            margin: 0 0 20px 0;
+            font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .pulse-dot {
-            width: 8px;
-            height: 8px;
+            width: 10px;
+            height: 10px;
             background-color: #34d399;
             border-radius: 50%;
             display: inline-block;
+            box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
         }
 
         .intro-text {
-            color: #cbd5e1;
+            color: var(--text-muted);
             font-size: 16px;
-            margin-top: 24px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(51, 65, 85, 0.3);
-        }
-
-        /* Grid de Proyectos */
-        .section-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            gap: 12px;
             margin-bottom: 32px;
         }
 
-        .section-title i {
-            color: #22d3ee;
+        /* Botones del Hero */
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-wine);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #4D1222;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-wine);
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid var(--primary-wine);
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(107, 29, 51, 0.05);
+        }
+
+        /* Redes Sociales */
+        .hero-socials {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-socials a {
+            color: var(--primary-wine);
+            font-size: 20px;
+            transition: opacity 0.3s;
+            text-decoration: none;
+        }
+
+        .hero-socials a:hover {
+            opacity: 0.7;
+        }
+
+        /* --- NUEVO CONTENEDOR REDONDO (FOTO DE PERFIL) --- */
+        .hero-image-container {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            flex-shrink: 0;
+            border-radius: 50%; /* Transforma el recuadro en un círculo perfecto */
+            overflow: hidden;    /* Corta cualquier exceso de la foto fuera del círculo */
+            border: 4px solid var(--primary-wine);
+            box-shadow: 0 20px 40px rgba(107, 29, 51, 0.15);
+            /* Asegura que no existan imágenes decorativas externas de fondo */
+            background-image: none !important; 
+            background-color: #ffffff;
+        }
+
+        @media (min-width: 960px) {
+            .hero-image-container {
+                width: 360px;
+                height: 360px;
+            }
+        }
+
+        .hero-profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Evita que la foto se distorsione o se estire */
+            object-position: center top; /* Centra el encuadre directamente en tu rostro */
+        }
+
+        /* --- DISEÑO DE PROYECTOS INTEGRADO --- */
+        .section-title-box {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-wine);
+            margin: 0;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 8px;
         }
 
         .grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 32px;
+            gap: 24px;
         }
 
         @media (min-width: 768px) {
             .grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
-        /* Tarjetas de Proyectos */
         .card {
-            background-color: rgba(30, 41, 59, 0.4);
-            border-radius: 16px;
-            border: 1px solid #1e293b;
+            background-color: var(--bg-cards);
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
             padding: 24px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: all 0.3s ease;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
 
         .card:hover {
-            transform: translateY(-4px);
-            border-color: #334155;
-            background-color: rgba(30, 41, 59, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(107, 29, 51, 0.08);
         }
 
         .card-header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
         }
 
         .icon-box {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-        }
-
-        .icon-cyan {
-            color: #22d3ee;
-            background-color: rgba(6, 182, 212, 0.1);
-            border: 1px solid rgba(6, 182, 212, 0.2);
-        }
-
-        .icon-purple {
-            color: #c084fc;
-            background-color: rgba(168, 85, 247, 0.1);
-            border: 1px solid rgba(168, 85, 247, 0.2);
-        }
-
-        .icon-orange {
-            color: #fb923c;
-            background-color: rgba(251, 146, 60, 0.1);
-            border: 1px solid rgba(251, 146, 60, 0.2);
-        }
-
-        .card-tag {
-            font-family: monospace;
-            font-size: 12px;
-            color: #64748b;
-            background-color: #0f172a;
-            padding: 4px 10px;
-            border-radius: 6px;
-            border: 1px solid #1e293b;
+            font-size: 18px;
+            background-color: rgba(107, 29, 51, 0.08);
+            color: var(--primary-wine);
         }
 
         .card h3 {
-            font-size: 20px;
-            font-weight: bold;
-            color: #ffffff;
-            margin: 16px 0 8px 0;
-            transition: color 0.3s ease;
-        }
-
-        .card:hover h3 {
-            color: #22d3ee;
-        }
-
-        .card-purple:hover h3 {
-            color: #c084fc;
-        }
-
-        .card-orange:hover h3 {
-            color: #fb923c;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-wine);
+            margin: 0;
         }
 
         .card p {
-            color: #94a3b8;
+            color: var(--text-muted);
             font-size: 14px;
             margin: 0 0 16px 0;
-            min-height: 60px;
+            flex-grow: 1;
         }
 
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 16px;
+            gap: 6px;
         }
 
         .tech-tag {
-            font-family: monospace;
-            font-size: 12px;
-            background-color: #1e293b;
-            color: #cbd5e1;
+            font-size: 11px;
+            font-weight: 600;
+            background-color: var(--bg-light);
+            color: var(--primary-wine);
             padding: 4px 8px;
             border-radius: 4px;
+            border: 1px solid var(--border-light);
         }
 
-        /* Botones Deshabilitados */
         .btn-disabled {
             width: 100%;
-            background-color: #1e293b;
-            color: #64748b;
-            font-size: 14px;
+            background-color: #f5f5f5;
+            color: #a0a0a0;
+            font-size: 13px;
             font-weight: 600;
-            padding: 10px 16px;
-            border-radius: 12px;
-            border: 1px solid rgba(51, 65, 85, 0.5);
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
             cursor: not-allowed;
-            margin-top: 24px;
+            margin-top: 16px;
+            text-decoration: none;
         }
 
-        /* Footer */
         footer {
             margin-top: 64px;
             padding-top: 24px;
-            border-top: 1px solid #1e293b;
+            border-top: 1px solid var(--border-light);
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            gap: 16px;
-            font-family: monospace;
+            justify-content: center;
             font-size: 12px;
-            color: #64748b;
-        }
-
-        @media (min-width: 640px) {
-            footer {
-                flex-direction: row;
-            }
-        }
-
-        .footer-status {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .footer-dot {
-            width: 6px;
-            height: 6px;
-            background-color: #22d3ee;
-            border-radius: 50%;
+            color: var(--text-muted);
         }
     </style>
 </head>
@@ -278,105 +314,21 @@
 
     <div class="container">
         
-        <!-- ENCABEZADO DE ENFOQUE TÉCNICO (100% QA) -->
-        <header>
-            <div>
-                <span class="badge">QA Engineer Portfolio</span>
+        <!-- SECCIÓN HERO NUEVA (FOTO REDONDA, ADIÓS HOJAS Y PUNTOS) -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <p class="hero-greeting">¡Hola! Soy</p>
                 <h1>Mónica Caro</h1>
                 <p class="subtitle">
                     <span class="pulse-dot"></span>
                     QA Engineer | Especializada en Aseguramiento de Calidad & Automatización
                 </p>
-            </div>
-            
-            <div class="intro-text">
-                <p>
-                    Ingeniera de control de calidad de software (QA) con un enfoque metódico, riguroso y analítico para la detección de fallas y optimización de procesos. Apasionada por el diseño estratégico de pruebas funcionales, la validación exhaustiva de sistemas y la construcción de pipelines automatizados que garanticen la estabilidad, seguridad y máxima calidad en productos digitales.
-                </p>
-            </div>
-        </header>
-
-        <!-- PANEL INTERACTIVO DE PROYECTOS -->
-        <main>
-            <div class="section-title">
-                <i class="fas fa-cubes"></i> Consola de Proyectos Automatizados
-            </div>
-            
-            <div class="grid">
                 
-                <!-- TARJETA 1: AUTOMATIZACIÓN UI / E2E -->
-                <div class="card">
-                    <div>
-                        <div class="card-header">
-                            <div class="icon-box icon-cyan">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <span class="card-tag">Sprint UI</span>
-                        </div>
-                        <h3>Framework de Pruebas Web E2E</h3>
-                        <p>
-                            Automatización de flujos críticos de usuario de extremo a extremo (UI). Implementación bajo patrones de diseño profesionales (POM), aserciones avanzadas y manejo inteligente de esperas dinámicas.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Playwright / Selenium</span>
-                            <span class="tech-tag">Page Object Model</span>
-                        </div>
-                    </div>
-                    <button class="btn-disabled" disabled>
-                        <i class="fas fa-play" style="color: rgba(34, 211, 238, 0.4)"></i> Conectar Automatización Real (Próximamente)
-                    </button>
+                <div class="intro-text">
+                    <p>
+                        Ingeniera de control de calidad de software (QA) con un enfoque metódico, riguroso y analítico para la detección de fallas y optimización de procesos. Apasionada por el diseño estratégico de pruebas funcionales, la validación exhaustiva de sistemas y la construcción de pipelines automatizados que garanticen la estabilidad, seguridad y máxima calidad en productos digitales.
+                    </p>
                 </div>
 
-                <!-- TARJETA 2: AUTOMATIZACIÓN DE APIS -->
-                <div class="card card-orange">
-                    <div>
-                        <div class="card-header">
-                            <div class="icon-box icon-orange">
-                                <i class="fas fa-network-wired"></i>
-                            </div>
-                            <span class="card-tag">Sprint API</span>
-                        </div>
-                        <h3>Pruebas Automatizadas de APIs</h3>
-                        <p>
-                            Validación exhaustiva de servicios backend. Diseño de suites de pruebas con scripts de pre-solicitud, validación dinámica de esquemas JSON, códigos de estado y tiempos de respuesta.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Postman</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">REST API</span>
-                        </div>
-                    </div>
-                    <!-- ESTE ES TU NUEVO BOTÓN NARANJA INTERACTIVO CONECTADO A TU POSTMAN REAL -->
-                    <a href="https://www.postman.com/monicalilianacaro-7098269/monica-caro-qa-portfolio/collection/k5500i4/final-project-api-automated-testing?action=share&creator=56719461" target="_blank" style="text-decoration: none;">
-                        <button style="width: 100%; background-color: #fb923c; color: #0f172a; font-size: 14px; font-weight: 600; padding: 10px 16px; border-radius: 12px; border: none; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; margin-top: 24px; transition: background-color 0.3s ease;">
-                            <i class="fas fa-external-link-alt"></i> Inspeccionar Espacio en Postman
-                        </button>
-                    </a>
-                </div>
-                                <!-- TARJETA 3: REPORTE INTERACTIVO EN TIEMPO REAL -->
-                <div class="card card-purple">
-                    <div>
-                        <div class="card-header">
-                            <div class="icon-box icon-purple">
-                                <i class="fas fa-chart-bar"></i>
-                            </div>
-                            <span class="card-tag">CI/CD Link</span>
-                        </div>
-                        <h3>Consola de Reportes Allure</h3>
-                        <p>
-                            Integración del framework de reportes visuales Allure. Permite auditar de manera interactiva los gráficos de ejecución, tiempos de respuesta, suites de pruebas y evidencias multimedia de errores.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Allure Report</span>
-                            <span class="tech-tag">GitHub Actions</span>
-                            <span class="tech-tag">GitHub Pages</span>
-                        </div>
-                    <a href="./allure-report/index.html" target="_blank" style="text-decoration: none;">
-                                            <!-- BOTÓN BLOQUEADO EN ESPERA DEL PROYECTO FINAL -->
-                    <button class="btn-disabled" disabled>
-                        <i class="fas fa-external-link-alt"></i> Abrir Reporte Gráfico (Próximamente)
-                    </button>
-
-
-
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn-primary">Ver Proyectos &rarr;</a>
