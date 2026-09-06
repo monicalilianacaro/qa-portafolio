@@ -281,6 +281,11 @@ section {
     text-align: center;
     gap: 25px;
 }
+   .hero-text {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
 
     main {
         padding: 35px 15px;
@@ -383,7 +388,7 @@ section {
     letter-spacing: 0.3px;
     color: #4a4540;
 }
-```
+
 /* ==============================
    BARRA DE NAVEGACIÓN
    ============================== */
