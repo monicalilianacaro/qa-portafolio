@@ -355,6 +355,13 @@ section {
     color: #666;
     font-size: 16px;
 }
+.hero-tagline {
+    margin-top: 18px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #4a4540;
+}
 ```
 /* ==============================
    BARRA DE NAVEGACIÓN
