@@ -130,7 +130,12 @@ section {
     font-size: 13px;
     font-weight: 600;
 }
-
+.project-skills {
+    margin-bottom: 20px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+}
 .card a {
     display: inline-block;
     text-decoration: none;
