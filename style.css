@@ -100,6 +100,16 @@ section {
     font-size: 15px;
     margin-bottom: 25px;
 }
+.project-status {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #f0ece7;
+    color: #4a4540;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
 /* ==============================
    TECNOLOGÍAS Y BOTONES
    ============================== */
