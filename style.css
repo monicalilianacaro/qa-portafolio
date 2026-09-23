@@ -571,3 +571,46 @@ section {
     cursor: pointer;
     font-weight: 300;
 }
+/* Refuerzo del color de acento */
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.card:hover {
+    border-color: var(--accent);
+}
+
+.tech-tag {
+    border: 1px solid transparent;
+}
+
+.card:hover .tech-tag {
+    border-color: rgba(45, 106, 79, 0.3);
+}
+
+.contact-link:hover {
+    border-color: var(--accent);
+}
+
+.contact-link i {
+    color: var(--accent);
+}
+
+.skill-mini-header i {
+    color: var(--accent);
+}
+
+.hero-photo img {
+    border-color: var(--accent);
+}
