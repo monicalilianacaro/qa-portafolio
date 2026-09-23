@@ -211,7 +211,65 @@
         </div>
     </section>
 
+<!-- ==================== DISEÑO DE PRUEBAS ==================== -->
+<section class="test-design-section" id="diseno-pruebas">
 
+    <div class="section-title-box">
+        <h2 class="section-title">Diseño de Casos de Prueba</h2>
+        <p class="section-subtitle">
+            Ejemplos de casos de prueba diseñados para el endpoint de kits y entregas
+            de Urban Grocers, aplicando clases de equivalencia y análisis de valores límite.
+        </p>
+    </div>
+
+    <div class="test-case-table-wrapper">
+        <table class="test-case-table">
+            <thead>
+                <tr>
+                    <th>Caso de prueba</th>
+                    <th>Resultado esperado</th>
+                    <th>Resultado obtenido</th>
+                    <th>Estatus</th>
+                </tr>
+            </thead>
+           <tbody>
+    <tr>
+        <td>Verificar que el usuario pueda añadir un producto existente a un kit</td>
+        <td>Se añade el producto correctamente — 200 OK</td>
+        <td>Se añade el producto correctamente — 200 OK</td>
+        <td><span class="status-badge passed">Passed</span></td>
+    </tr>
+    <tr>
+        <td>Verificar que la entrega "Order and Go" no esté disponible con carrito vacío (0 productos, 0 kg)</td>
+        <td>El sistema rechaza la entrega — isItPossibleToDeliver: false</td>
+        <td>Acepta la entrega y cobra $3 USD por un paquete inexistente — isItPossibleToDeliver: true</td>
+        <td><span class="status-badge failed">Failed</span></td>
+    </tr>
+    <tr>
+        <td>Verificar la restricción de tipo de dato enviando un string en el ID del producto</td>
+        <td>El validador bloquea la petición — 400 Bad Request</td>
+        <td>El servidor colapsa — 500 Internal Server Error</td>
+        <td><span class="status-badge failed">Failed</span></td>
+    </tr>
+    <tr>
+        <td>Verificar el rechazo al superar el límite máximo de productos únicos permitidos (31 de 30)</td>
+        <td>El backend rechaza la transacción — 400 Bad Request</td>
+        <td>Los 21 artículos se guardan con éxito — 200 OK</td>
+        <td><span class="status-badge failed">Failed</span></td>
+    </tr>
+</tbody>
+        </table>
+    </div>
+
+    <div class="test-design-footer">
+        <p class="test-design-note">
+            Suite completa: 52 casos de prueba diseñados aplicando clases de equivalencia
+            y análisis de valores límite. 30+ bugs identificados y reportados formalmente en Jira.
+        </p>
+        <a href="https://docs.google.com/spreadsheets/d/17yf80d-fZtYAqnW4kdgtnoThGBaJ8pIl4HyANeQcEzs/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary project-btn">Ver suite completa &rarr;</a>
+    </div>
+
+</section>
     <!-- ==================== HABILIDADES ==================== -->
 <section class="skills-section" id="habilidades">
 
