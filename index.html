@@ -94,10 +94,10 @@
         
         <h3>Automatización de Pruebas de API - Urban Grocers</h3>
 
-        <div class="project-media">
-         <video autoplay loop muted playsinline>
-           <source src="Urban_groucers_evidencia.mp4" type="video/mp4">
-         </video>
+        <div class="project-media" onclick="openVideoLightbox('Urban_groucers_evidencia.mp4')">
+    <video autoplay loop muted playsinline>
+        <source src="Urban_groucers_evidencia.mp4" type="video/mp4">
+    </video>
 </div>
         
         <p>
@@ -178,11 +178,11 @@
 
                     <h3>Automatización E2E del Flujo de Solicitud de Taxi - Urban Routes</h3>
                     
-                   <div class="project-media">
-                     <video autoplay loop muted playsinline>
-                       <source src="Urban_routes_evidencia.mp4" type="video/mp4">
-                    </video>
-          </div>
+                   <div class="project-media" onclick="openVideoLightbox('Urban_routes_evidencia.mp4')">
+    <video autoplay loop muted playsinline>
+        <source src="Urban_routes_evidencia.mp4" type="video/mp4">
+    </video>
+</div>
                     <p>
                         Suite de pruebas end-to-end que automatiza el flujo completo de pedir
                         un taxi: definición de ruta, selección de tarifa Comfort, verificación
@@ -503,16 +503,31 @@
 </footer>
 <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
     <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="Evidencia ampliada">
+    <img id="lightbox-img" src="" alt="Evidencia ampliada" style="display:none;">
+    <video id="lightbox-video" controls loop style="display:none;"></video>
 </div>
 
 <script>
     function openLightbox(src) {
-        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox-video').style.display = 'none';
+        document.getElementById('lightbox-video').pause();
+        const img = document.getElementById('lightbox-img');
+        img.src = src;
+        img.style.display = 'block';
         document.getElementById('lightbox').classList.add('active');
     }
+
+    function openVideoLightbox(src) {
+        document.getElementById('lightbox-img').style.display = 'none';
+        const video = document.getElementById('lightbox-video');
+        video.src = src;
+        video.style.display = 'block';
+        video.play();
+        document.getElementById('lightbox').classList.add('active');
+    }
+
     function closeLightbox() {
         document.getElementById('lightbox').classList.remove('active');
+        document.getElementById('lightbox-video').pause();
     }
 </script>
-
