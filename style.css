@@ -614,3 +614,16 @@ section {
 .hero-photo img {
     border-color: var(--accent);
 }
+/* Acento en tarjetas de proyecto */
+
+.card {
+    border-top: 3px solid var(--accent);
+}
+
+.card .icon-box {
+    background-color: var(--accent);
+}
+
+.card .icon-box i {
+    color: #ffffff;
+}
