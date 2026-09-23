@@ -555,7 +555,8 @@ section {
     display: flex;
 }
 
-.lightbox-overlay img {
+.lightbox-overlay img,
+.lightbox-overlay video {
     max-width: 90%;
     max-height: 85vh;
     border-radius: 8px;
