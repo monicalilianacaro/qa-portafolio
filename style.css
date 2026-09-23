@@ -627,3 +627,9 @@ section {
 .card .icon-box i {
     color: #ffffff;
 }
+/* Conectar visualmente las demás tarjetas con el acento */
+
+.skill-mini-card,
+.info-block {
+    border-top: 2px solid rgba(45, 106, 79, 0.35);
+}
