@@ -447,67 +447,44 @@ section {
     font-size: 13px;
     color: #cccccc;
 }
-.info-block p {
-    text-align: justify;
-}
-@media (max-width: 600px) {
-   .hero-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 25px;
-}
-   .hero-text {
-    width: 100%;
-    max-width: 500px;
-    padding: 0 15px;
-    text-align: center;
-}
-   .hero-text p:first-of-type {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+```css
+/* ==============================
+   SOBRE MÍ
+   ============================== */
+
+.about-me .about-intro {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
 }
 
-    main {
-        padding: 35px 15px;
-    }
-
-    .section-title {
-        font-size: 27px;
-    }
-
-    .section-subtitle {
-        font-size: 14px;
-    }
-
-    .grid,
-    .skills-mini-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        min-height: auto;
-        padding: 22px;
-    }
-
-    .info-block {
-        padding: 22px;
-    }
-
-    .nav-container {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-    }
-
-    .nav-links {
-        gap: 10px 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-links a {
-        font-size: 13px;
-    }
+.about-item {
+    margin-bottom: 22px;
 }
 
+.about-item:last-child {
+    margin-bottom: 0;
+}
+
+.about-item h4 {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 16px;
+    margin-bottom: 7px;
+    color: #252525;
+}
+
+.about-item h4 i {
+    font-size: 14px;
+    color: #4a4540;
+}
+
+.about-item p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+```
