@@ -1,6 +1,10 @@
 /* ==============================
    ESTILOS GENERALES
    ============================== */
+:root {
+    --accent: #2d6a4f;
+}
+
 
 * {
     box-sizing: border-box;
@@ -81,12 +85,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0ece7;
+    background-color: rgba(45, 106, 79, 0.1);
     border-radius: 12px;
     margin-bottom: 20px;
 }
 
 .icon-box i {
+    color: var(--accent)
     font-size: 22px;
 }
 
@@ -104,8 +109,8 @@ section {
     display: inline-block;
     margin-bottom: 10px;
     padding: 5px 10px;
-    background-color: #f0ece7;
-    color: #4a4540;
+    background-color: rgba(45, 106, 79, 0.12);
+    color: var(--accent);
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
@@ -304,6 +309,7 @@ section {
 }
 
 .hero-label {
+    color: var(--accent);
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
