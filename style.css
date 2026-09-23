@@ -633,3 +633,85 @@ section {
 .info-block {
     border-top: 2px solid rgba(45, 106, 79, 0.35);
 }
+/* ==============================
+   DISEÑO DE PRUEBAS
+   ============================== */
+
+.test-case-table-wrapper {
+    overflow-x: auto;
+    background-color: #ffffff;
+    border: 1px solid #e5e2de;
+    border-top: 3px solid var(--accent);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.test-case-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.test-case-table th {
+    text-align: left;
+    padding: 16px 20px;
+    background-color: #f7f5f2;
+    color: #4a4540;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #e5e2de;
+}
+
+.test-case-table td {
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #555;
+    border-bottom: 1px solid #f0ece7;
+    vertical-align: top;
+}
+
+.test-case-table tr:last-child td {
+    border-bottom: none;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status-badge.passed {
+    background-color: rgba(45, 106, 79, 0.12);
+    color: var(--accent);
+}
+
+.status-badge.failed {
+    background-color: rgba(180, 60, 50, 0.1);
+    color: #b43c32;
+}
+
+.test-design-footer {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.test-design-note {
+    color: #666;
+    font-size: 14px;
+    max-width: 500px;
+}
+
+@media (max-width: 700px) {
+    .test-design-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
