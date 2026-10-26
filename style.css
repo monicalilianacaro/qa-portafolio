@@ -339,6 +339,28 @@ section {
     letter-spacing: 0.3px;
     color: #4a4540;
 }
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.hero-btn-primary { background-color: var(--accent); color: #ffffff; }
+.hero-btn-primary:hover { opacity: 0.9; }
+
+.hero-btn-secondary { border: 1.5px solid #252525; color: #252525; }
+.hero-btn-secondary:hover { background-color: #252525; color: #ffffff; }
 
 /* ==============================
    BARRA DE NAVEGACIÓN
