@@ -716,3 +716,21 @@ section {
         align-items: flex-start;
     }
 }
+@media (max-width: 700px) {
+    main { padding: 40px 18px; }
+    section { margin-bottom: 50px; }
+
+    .navbar { position: static; }
+    .nav-container { flex-direction: column; gap: 10px; padding: 14px 20px; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 8px 18px; }
+
+    .hero-content { flex-direction: column; text-align: center; gap: 25px; }
+    .hero-photo img { width: 130px; height: 130px; }
+    .hero-text h1 { font-size: 32px; }
+    .hero-actions { justify-content: center; }
+
+    .section-title { font-size: 26px; }
+    .grid, .skills-mini-grid { grid-template-columns: 1fr; }
+    .card { min-height: auto; padding: 22px; }
+    .contact-links { flex-direction: column; align-items: stretch; }
+}
